@@ -4,7 +4,7 @@ import yaml
 from sklearn.model_selection import train_test_split
 
 def normalize(x):
-    return x.astype("float32") / 255.0
+    return (x.astype("float32") / 255.0 - 0.2860) / 0.3530
 
 def main():
     with open("params.yaml") as f:
