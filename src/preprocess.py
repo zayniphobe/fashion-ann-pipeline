@@ -20,6 +20,6 @@ def main():
                         x_train=x_tr, y_train=y_tr, x_val=x_val, y_val=y_val,
                         x_test=x_test, y_test=y_test)
     print("Processed:", x_tr.shape, x_val.shape, x_test.shape)
+    print("Class counts:", np.bincount(y_tr))
 
-if __name__ == "__main__":
-    main()
+main()
