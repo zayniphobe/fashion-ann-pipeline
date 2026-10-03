@@ -9,4 +9,3 @@ __pycache__/
 # DVC tracked individual files/directories
 models/
 reports/
-metrics.json
