@@ -5,3 +5,7 @@ __pycache__/
 .dvc/tmp/
 .dvc/config.local
 *.h5
+
+# DVC tracked individual files/directories
+models/
+reports/
