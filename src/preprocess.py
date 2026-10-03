@@ -3,8 +3,13 @@ import numpy as np
 import yaml
 from sklearn.model_selection import train_test_split
 
-def normalize(x):
-    return x.astype("float32") / 127.5 - 1.0
+def normalize(x, mode="zscore"):
+    x = x.astype("float32") / 255.0          # [0, 1] scaling
+    if mode == "zscore":
+        return (x - 0.2860) / 0.3530
+    if mode == "minus1to1":
+        return x * 2.0 - 1.0
+    return x
 
 def main():
     with open("params.yaml") as f:
